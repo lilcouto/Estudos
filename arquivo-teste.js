@@ -1,7 +1,12 @@
 "use strict";
-// const myArray = [1,2,3,4,5,6]
-// let soma = 0
-// for (let i = 0;i<myArray.length;i++) {
-//     soma += myArray[i]
-// }
-// console.log(soma)
+const h1 = document.querySelector("h1")
+const p = document.querySelector(".paragrafo")
+let timer = 300
+const title = document.querySelector("title")
+setInterval(() => {
+  let minutos = Math.floor(timer/60)
+  let segundos = timer % 60
+  let tempoFormatado = ` ${minutos}:${segundos < 10 ? '0' : ''}${segundos}`
+  p.innerText = `Faltam ${tempoFormatado} para acabar a oferta`
+  timer--
+},1000)
