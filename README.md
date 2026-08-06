@@ -1,123 +1,60 @@
-# JavaScript Exercícios
+# Exercícios de JavaScript
 
-Repositório criado para registrar minha evolução em JavaScript.
+Repositório de exercícios resolvidos durante meus estudos de JavaScript.  
+Cada arquivo trata um problema pequeno e independente, focado em prática de base.
 
-## 📚 Conteúdo
+Sou estudante de Ciência da Computação (2º período) e uso este espaço para registrar exercícios resolvidos durante a formação.  
+Aqui há **prática de base**, não um produto final.
 
-### Fundamentos
-- Variáveis
-- Operadores
-- Condicionais
-- Operadores Lógicos (AND: `&&`, OR: `||`, NOT: `!`)
+## Visão rápida
 
-### Funções
-- Parâmetros
-- Retorno
-- Escopo
+- Linguagem principal: **JavaScript** (com apoio de HTML em exercícios de DOM)
+- Foco: resolução de problemas pequenos e objetivos
+- Conteúdo atual: estruturas de controle, arrays, objetos, funções, métodos de array e manipulação de DOM
 
-### Objetos
-- Objetos
-- Arrays de objetos
-- Acesso a propriedades aninhadas
+## Temas cobertos no código
 
-### Clonagem
-- JSON.parse(JSON.stringify())
-- Spread Operator (`...`)
+- Variáveis, operadores, condicionais e operadores lógicos
+- Funções, parâmetros, retorno e escopo
+- Arrays e objetos (incluindo objetos aninhados)
+- Laços (`for`, `for...of`, `for...in`) com `break` e `continue`
+- Métodos de array (`forEach`, `map`, `filter`, `find`, `every`, `some`, `reduce`)
+- Cópia/clonagem de objetos para evitar mutação acidental
+- Manipulação de DOM: seleção de elementos, leitura e alteração de texto, criação dinâmica de elementos, atributos `data-*`
+- Diferença prática entre `innerText`, `textContent` e `innerHTML` com foco em segurança de conteúdo
 
-### Arrays
-- push, pop, shift, unshift
-- sort, reverse
-- Destructuring
-- Spread
+## Próxima organização
 
-### Laços de Repetição
-- **for** (com índice numérico)
-- **for...of** (iterar elementos)
-- **for...in** (iterar chaves de objetos)
-- **break** (parar loop)
-- **continue** (pular iteração)
+Atualmente os arquivos estão na raiz do repositório; o próximo passo é agrupá-los por tema nas pastas abaixo.
 
-### Array Methods ⭐
-- **forEach** - Executar ação em cada elemento
-- **map** - Transformar elementos e retornar novo array
-- **filter** - Selecionar elementos que atendem critério
-- **find** - Encontrar primeiro elemento
-- **every** - Validar se TODOS atendem critério
-- **some** - Validar se ALGUM atende critério
-- **reduce** - Combinar elementos em um único valor
+- `fundamentos/`  
+  Exercícios de variáveis, condicionais, operadores e lógica básica.
+- `estruturas-de-dados/`  
+  Arrays, objetos e transformações/manipulações diretas.
+- `lacos/`  
+  Exercícios com `for`, `for...of`, `for...in`, `break` e `continue`.
+- `metodos-array/`  
+  Prática de `forEach`, `map`, `filter`, `find`, `every`, `some`, `reduce`.
+- `dom/`  
+  Exercícios com HTML + JavaScript para manipulação do DOM.
 
-## 📂 Exercícios Resolvidos
+## Exercícios em destaque
 
-### Básico/Médio
-- 01-cadastro-alunos.js
-- 01-clonar-pessoa.js
-- 01-media-aluno.js
-- 02-aumento-funcionario-clone.js
-- 02-fila-atendimento.js
-- 02-total-produtos.js
-- 03-alterar-produto-clone.js
-- 03-aumento-funcionario.js
-- 03-ranking-notas.js
-- 04-menor-estoque.js
-- 04-mercado.js
-- 05-total-carrinho.js
-- 07-filtra-nome-forOf.js
-- 08-procura-numero-forof.js
-- 09-salarios-forin.js
-- 10-busca-array-for.js
-- 11-tabuada-for.js
-- 12-filtrar-produtos-forin.js
+- **`05-total-carrinho.js`** — calcula o valor total de uma compra a partir de uma lista de itens com preços e quantidades.  
+- **`12-filtrar-produtos-forin.js`** — identifica produtos com estoque baixo para priorizar reposição.  
+- **`total-vendas-reduce.js`** — consolida o faturamento total de vendas em um único resultado numérico.  
+- **`relatorio-avancado-combinado.js`** — gera um relatório de desempenho considerando vendedores ativos e total vendido por pessoa.  
+- **`Dom2atividade.js`** — resolve um fluxo completo de página: leitura de catálogo, atualização de dados em tela, criação de elementos e validação de saída de texto.
 
-### Array Methods ✨ Novo
-- **relatorio-vendas-foreach.js** - forEach com cálculo de totais
-- **aumento-salarios-map.js** - map com transformação de dados
+## Como executar
 
-## 🎯 Novidades de Hoje
+- **Exercícios de lógica, arrays e objetos**: execute com Node.js.
+```bash
+node nome-do-arquivo.js
+```
 
-### Laços com Break e Continue
-- **break** - Para a execução do loop imediatamente
-- **continue** - Pula para a próxima iteração
-- Exemplos práticos com arrays
+- **Exercícios de DOM**: abra o arquivo `.html` no navegador e acompanhe a execução pelo console do DevTools.
 
-### Array Methods - Explicação Completa
-Aprendemos os 7 principais métodos com exemplos em objetos:
-1. ✅ **forEach** - Executar ação em cada elemento
-2. ✅ **map** - Transformar elementos e retornar novo array
-3. ✅ **filter** - Selecionar elementos que atendem critério
-4. ✅ **find** - Buscar primeiro elemento específico
-5. ✅ **every** - Validar se TODOS atendem critério
-6. ✅ **some** - Validar se ALGUM atende critério
-7. ✅ **reduce** - Combinar elementos em um único valor
+## Estudo atual
 
-### Exercícios Array Methods (Em Progresso)
-- ✅ relatorio-vendas-foreach.js
-- ✅ aumento-salarios-map.js
-- 🔄 alunos-aprovados-filter.js (em breve)
-- 🔄 buscar-produto-find.js (em breve)
-- 🔄 validar-ativos-every.js (em breve)
-- 🔄 verificar-problemas-some.js (em breve)
-- 🔄 total-vendas-reduce.js (em breve)
-
-## 💡 Técnicas Utilizadas
-
-- Template strings com acento grave (`` ` ``)
-- Spread operator (`...`)
-- Arrow functions (`=>`)
-- Destructuring
-- Métodos encadeados (chaining)
-- .toFixed() para casas decimais
-- parseFloat() para conversão numérica
-
-## 🚀 Próximos Temas
-
-- Classes e Orientação a Objetos
-- Promises e Async/Await
-- Fetch API
-- DOM manipulation
-- React (em breve)
-
----
-
-**Objetivo:** Evoluir de Básico → Médio → Avançado em JavaScript! 💪
-
-Cada arquivo representa um exercício resolvido durante meus estudos.
+Atualmente estou estudando prática de JavaScript no navegador com foco em DOM e manipulação de dados.
