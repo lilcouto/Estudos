@@ -1,4 +1,3 @@
-// 26-verificar-problemas-some.js
 // Objetivo: Verificar se algum servidor está offline
 let servidores = [
     {nome: "Servidor 1", status: "online", uptime: 99.9},

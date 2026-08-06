@@ -1,4 +1,3 @@
-// 24-buscar-produto-find.js
 // Objetivo: Encontrar produto pelo ID
 let produtos = [
     {id: 1, nome: "Notebook", preco: 3000, estoque: 5},
@@ -14,4 +13,3 @@ if (acharId) {
 } else {
     console.log(`Produto não encontrado`)
 }
-

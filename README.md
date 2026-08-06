@@ -23,37 +23,76 @@ Aqui há **prática de base**, não um produto final.
 - Manipulação de DOM: seleção de elementos, leitura e alteração de texto, criação dinâmica de elementos, atributos `data-*`
 - Diferença prática entre `innerText`, `textContent` e `innerHTML` com foco em segurança de conteúdo
 
-## Próxima organização
+## Organização
 
-Atualmente os arquivos estão na raiz do repositório; o próximo passo é agrupá-los por tema nas pastas abaixo.
+Os exercícios estão agrupados por tema. Os nomes seguem o padrão
+`número-descrição-do-exercício` e os exercícios de DOM ficam em diretórios
+próprios, com seus arquivos `index.html`, `script.js` e `style.css` quando
+necessário.
 
-- `fundamentos/`  
-  Exercícios de variáveis, condicionais, operadores e lógica básica.
-- `estruturas-de-dados/`  
-  Arrays, objetos e transformações/manipulações diretas.
-- `lacos/`  
-  Exercícios com `for`, `for...of`, `for...in`, `break` e `continue`.
-- `metodos-array/`  
-  Prática de `forEach`, `map`, `filter`, `find`, `every`, `some`, `reduce`.
-- `dom/`  
-  Exercícios com HTML + JavaScript para manipulação do DOM.
+```text
+fundamentos/
+├── 01-media-do-aluno.js
+└── 02-tabuada-do-cinco.js
+
+estruturas-de-dados/
+├── 01-cadastro-de-alunos.js
+├── 02-fila-de-atendimento.js
+├── 03-gerenciamento-de-mercado.js
+├── 04-ranking-de-notas.js
+├── 05-total-de-produtos.js
+├── 06-menor-estoque.js
+├── 07-total-do-carrinho.js
+├── 08-clonar-pessoa.js
+├── 09-aumento-funcionario-com-mutacao.js
+├── 10-aumento-funcionario-sem-mutacao.js
+└── 11-alterar-produto-sem-mutacao.js
+
+lacos/
+├── 01-filtrar-nomes-com-for-of.js
+├── 02-procurar-numero-com-for-of.js
+├── 03-filtrar-salarios-com-for-in.js
+├── 04-buscar-nota-com-for.js
+└── 05-filtrar-produtos-com-for-in.js
+
+metodos-array/
+├── 01-relatorio-de-vendas-com-foreach.js
+├── 02-aumento-de-salarios-com-map.js
+├── 03-alunos-aprovados-com-filter.js
+├── 04-buscar-produto-com-find.js
+├── 05-validar-usuarios-com-every.js
+├── 06-verificar-servidores-com-some.js
+├── 07-total-de-vendas-com-reduce.js
+└── 08-relatorio-avancado-com-metodos.js
+
+dom/
+├── 01-selecao-e-estilos/
+│   ├── index.html
+│   └── script.js
+└── 02-catalogo-da-livraria/
+    ├── index.html
+    ├── script.js
+    └── style.css
+```
 
 ## Exercícios em destaque
 
-- **`05-total-carrinho.js`** — calcula o valor total de uma compra a partir de uma lista de itens com preços e quantidades.  
-- **`12-filtrar-produtos-forin.js`** — identifica produtos com estoque baixo para priorizar reposição.  
-- **`total-vendas-reduce.js`** — consolida o faturamento total de vendas em um único resultado numérico.  
-- **`relatorio-avancado-combinado.js`** — gera um relatório de desempenho considerando vendedores ativos e total vendido por pessoa.  
-- **`Dom2atividade.js`** — resolve um fluxo completo de página: leitura de catálogo, atualização de dados em tela, criação de elementos e validação de saída de texto.
+- **`estruturas-de-dados/07-total-do-carrinho.js`** — calcula o valor total de uma compra a partir de uma lista de itens com preços e quantidades.
+- **`lacos/05-filtrar-produtos-com-for-in.js`** — identifica produtos com estoque disponível para exibição.
+- **`metodos-array/07-total-de-vendas-com-reduce.js`** — consolida o faturamento total de vendas em um único resultado numérico.
+- **`metodos-array/08-relatorio-avancado-com-metodos.js`** — gera um relatório de desempenho considerando vendedores ativos e total vendido por pessoa.
+- **`dom/02-catalogo-da-livraria/script.js`** — resolve um fluxo completo de página: leitura de catálogo, atualização de dados em tela, criação de elementos e validação de saída de texto.
 
 ## Como executar
 
-- **Exercícios de lógica, arrays e objetos**: execute com Node.js.
+- **Exercícios de JavaScript**: execute o arquivo desejado com Node.js, por exemplo:
 ```bash
-node nome-do-arquivo.js
+node estruturas-de-dados/07-total-do-carrinho.js
 ```
 
-- **Exercícios de DOM**: abra o arquivo `.html` no navegador e acompanhe a execução pelo console do DevTools.
+- **Exercícios de DOM**: abra `dom/01-selecao-e-estilos/index.html` ou
+  `dom/02-catalogo-da-livraria/index.html` no navegador e acompanhe a execução
+  pelo console do DevTools.
 
 ## Estudo atual
 

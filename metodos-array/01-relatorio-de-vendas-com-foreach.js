@@ -1,5 +1,4 @@
 "use strict"
-// 21-relatorio-vendas-foreach.js
 // Objetivo: Exibir relatório de cada venda com cálculo
 let vendas = [
   { produto: "Notebook", preco: 3000, quantidade: 2 },
