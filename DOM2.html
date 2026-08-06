@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Praticando DOM — Livraria Aurora</title>
+  <style>
+    * { box-sizing: border-box; }
+    body {
+      font-family: system-ui, Arial, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      line-height: 1.5;
+      color: #1a1a1a;
+    }
+    header { border-bottom: 2px solid #333; padding-bottom: 12px; margin-bottom: 24px; }
+    section { margin-bottom: 40px; }
+    h2 { border-left: 4px solid #666; padding-left: 10px; }
+    .oculto { display: none; }
+    .livro {
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      padding: 14px;
+      margin-bottom: 12px;
+    }
+    .esgotado { background: #f5f5f5; }
+    .preco { font-weight: bold; color: #0a6; }
+    .badge { font-size: 12px; padding: 2px 8px; border: 1px solid #999; border-radius: 10px; }
+    table { border-collapse: collapse; width: 100%; }
+    th, td { border: 1px solid #bbb; padding: 8px; text-align: left; }
+    thead { background: #eee; }
+    label { display: block; margin-top: 10px; font-size: 14px; }
+    input, select, textarea { padding: 6px; width: 100%; max-width: 340px; }
+    footer { border-top: 1px solid #ccc; margin-top: 40px; padding-top: 12px; font-size: 14px; }
+  </style>
+  <script src="Dom2atividade.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1 id="titulo-loja">Livraria Aurora</h1>
+    <p id="subtitulo">Catálogo de livros usados <span class="oculto">(rascunho interno — não publicar)</span></p>
+  </header>
+
+  <main>
+
+    <!-- ============ CATÁLOGO ============ -->
+    <section id="catalogo">
+      <h2>Catálogo</h2>
+
+      <div class="livro" data-id="101" data-genero="ficcao" data-estoque="4">
+        <h3 class="titulo-livro">O Deserto dos Tártaros</h3>
+        <p class="autor">Dino Buzzati</p>
+        <p class="preco" data-valor="38.90">R$ 38,90</p>
+        <span class="badge">usado</span>
+      </div>
+
+      <div class="livro" data-id="102" data-genero="tecnico" data-estoque="12">
+        <h3 class="titulo-livro">Estruturas de Dados Essenciais</h3>
+        <p class="autor">Marina Coelho</p>
+        <p class="preco" data-valor="72.00">R$ 72,00</p>
+        <span class="badge">novo</span>
+      </div>
+
+      <div class="livro esgotado" data-id="103" data-genero="ficcao" data-estoque="0">
+        <h3 class="titulo-livro">A Cidade e as Serras</h3>
+        <p class="autor">Eça de Queirós</p>
+        <p class="preco" data-valor="25.50">R$ 25,50</p>
+        <span class="badge">esgotado</span>
+      </div>
+
+      <div class="livro oculto" data-id="104" data-genero="biografia" data-estoque="2">
+        <h3 class="titulo-livro">Memórias de um Tipógrafo</h3>
+        <p class="autor">Joaquim Nabuco Filho</p>
+        <p class="preco" data-valor="44.00">R$ 44,00</p>
+        <span class="badge">pré-venda</span>
+      </div>
+    </section>
+
+    <!-- ============ DESTAQUE ============ -->
+    <section id="destaque">
+      <h2>Livro em destaque</h2>
+      <img id="capa-destaque"
+           src="capas/deserto.jpg"
+           alt="Capa de O Deserto dos Tártaros"
+           width="120"
+           data-id="101">
+      <p id="descricao-destaque">
+        Um romance sobre a espera.
+        <span class="oculto">Nota interna: revisar tradução na página 84.</span>
+      </p>
+      <a id="link-editora" href="https://exemplo.com/editora" target="_blank" rel="noopener">
+        Site da editora
+      </a>
+    </section>
+
+    <!-- ============ TABELA ============ -->
+    <section id="secao-vendas">
+      <h2>Vendas do mês</h2>
+      <table id="tabela-vendas">
+        <thead>
+          <tr>
+            <th>Livro</th>
+            <th>Quantidade</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr data-id="101"><td>O Deserto dos Tártaros</td><td>7</td><td>R$ 272,30</td></tr>
+          <tr data-id="102"><td>Estruturas de Dados Essenciais</td><td>3</td><td>R$ 216,00</td></tr>
+          <tr data-id="103"><td>A Cidade e as Serras</td><td>11</td><td>R$ 280,50</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ============ FORMULÁRIO ============ -->
+    <section id="secao-cadastro">
+      <h2>Cadastrar novo livro</h2>
+      <form id="form-livro">
+        <label for="campo-titulo">Título</label>
+        <input type="text" id="campo-titulo" name="titulo" placeholder="Digite o título">
+
+        <label for="campo-autor">Autor</label>
+        <input type="text" id="campo-autor" name="autor" placeholder="Digite o autor">
+
+        <label for="campo-preco">Preço</label>
+        <input type="number" id="campo-preco" name="preco" step="0.01" min="0" value="0">
+
+        <label for="campo-genero">Gênero</label>
+        <select id="campo-genero" name="genero">
+          <option value="ficcao">Ficção</option>
+          <option value="tecnico">Técnico</option>
+          <option value="biografia">Biografia</option>
+        </select>
+
+        <label for="campo-sinopse">Sinopse</label>
+        <textarea id="campo-sinopse" name="sinopse" rows="3"></textarea>
+
+        <label>
+          <input type="checkbox" id="campo-usado" name="usado"> Livro usado
+        </label>
+
+        <button type="submit" id="btn-cadastrar">Cadastrar</button>
+      </form>
+      <p id="saida-cadastro"></p>
+    </section>
+
+    <!-- ============ LISTA VAZIA (para exercícios de criação) ============ -->
+    <section id="secao-desejos">
+      <h2>Lista de desejos</h2>
+      <ul id="lista-desejos"></ul>
+      <p id="contador-desejos">0 livros na lista</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p id="rodape">Livraria Aurora — <span id="total-livros">4</span> títulos cadastrados</p>
+  </footer>
+
+  
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+  body { font-family: Arial, sans-serif; max-width: 800px; margin: 40px auto; }
+  .destaque { background: yellow; }
+  .card { border: 1px solid #ccc; border-radius: 6px; padding: 12px; margin: 10px 0; }
+  .card.ativo { border-color: green; }
+</style>
+    <script src="atividadeDOM1.js" defer></script>
+</head>
+<body>
+  <header id="cabecalho">
+    <h1>Loja Virtual - Exercícios de DOM</h1>
+    <p class="subtitulo">Pratique aqui os métodos de seleção</p>
+  </header>
+
+  <main>
+    <section id="secao-produtos">
+      <h2>Produtos</h2>
+
+      <div class="card" id="produto-1" data-preco="50">
+        <h3 class="titulo-produto">Camiseta</h3>
+        <p class="descricao">Camiseta de algodão</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <div class="card ativo" id="produto-2" data-preco="120">
+        <h3 class="titulo-produto">Tênis</h3>
+        <p class="descricao">Tênis esportivo</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+
+      <div class="card" id="produto-3" data-preco="35">
+        <h3 class="titulo-produto">Boné</h3>
+        <p class="descricao">Boné ajustável</p>
+        <button class="btn-comprar">Comprar</button>
+      </div>
+    </section>
+
+    <section id="secao-frutas">
+      <h2>Lista de frutas</h2>
+      <ul id="lista-frutas">
+        <li class="fruta">Maçã</li>
+        <li class="fruta">Banana</li>
+        <li class="destaque">Uva</li>
+        <li class="fruta">Laranja</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
