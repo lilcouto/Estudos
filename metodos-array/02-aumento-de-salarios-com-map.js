@@ -1,5 +1,4 @@
 "use strict"
-// 22-aumento-salarios-map.js
 // Objetivo: Dar aumento de 10%
 let funcionarios = [
     {nome: "Ana", salario: 3000},

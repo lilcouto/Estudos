@@ -1,5 +1,4 @@
 "use strict"
-// 27-total-vendas-reduce.js
 // Objetivo: Somar total de vendas do mês
 let vendas = [
     {data:"01/01", produto: "Notebook", valor: 3000},

@@ -1,5 +1,4 @@
 "use strict"
-// 28-relatorio-avancado-combinado.js
 // Objetivo: Criar relatório complexo combinando métodos
 let vendedores = [
   { nome: "Ana", vendas: [1000, 1500, 2000], ativo: true },

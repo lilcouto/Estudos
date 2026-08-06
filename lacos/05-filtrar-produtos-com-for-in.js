@@ -1,5 +1,5 @@
 "use strict";
-// 12-filtrar-produtos-forin.js
+// Objetivo: Listar produtos disponíveis em estoque
 // Objetivo: Listar apenas produtos em estoque
 let produtos = {
   notebook: { preco: 3000, estoque: 5 },

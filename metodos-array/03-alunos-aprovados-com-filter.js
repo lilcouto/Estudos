@@ -1,4 +1,3 @@
-// 23-alunos-aprovados-filter.js
 // Objetivo: Listar apenas alunos com nota >= 7
 let alunos = [
     {nome: "Ana", nota: 8.5, turma: "A"},

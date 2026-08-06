@@ -1,4 +1,3 @@
-// 25-validar-ativos-every.js
 // Objetivo: Verificar se todos usuários estão ativos
 let usuarios = [
     {nome: "Ana", ativo: true, premium: true},
